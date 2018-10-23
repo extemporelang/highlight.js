@@ -62,7 +62,7 @@ $(document).ready(function() {
 ```
 
 You can use any tags instead of `<pre><code>` to mark up your code. If
-you don't use a container that preserve line breaks you will need to
+you don't use a container that preserves line breaks you will need to
 configure highlight.js to use the `<br>` tag:
 
 ```javascript
@@ -155,6 +155,12 @@ import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 ```
 
+To set the syntax highlighting style, if your build tool processes CSS from your JavaScript entry point, you can import the stylesheet directly into your CommonJS-module:
+
+```javascript
+import hljs from 'highlight.js/lib/highlight';
+import 'highlight.js/styles/github.css'
+```
 
 ## License
 
